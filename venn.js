@@ -1399,10 +1399,10 @@
             var update = selection;
             if (hasPrevious) {
                 update = selection.transition("venn").duration(duration);
-                update.selectAll("path")
+                update.selectAll(".venn-area path")
                     .attrTween("d", pathTween);
             } else {
-                update.selectAll("path")
+                update.selectAll(".venn-area path")
                     .attr("d", function(d) {
                         return intersectionAreaPath(d.sets.map(function (set) { return circles[set]; }));
                     });
